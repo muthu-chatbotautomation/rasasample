@@ -13,6 +13,6 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message("Hello World!")
+        dispatcher.utter_message("Hello World, hai muthu!")
 
         return []
