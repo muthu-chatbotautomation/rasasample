@@ -1,5 +1,5 @@
 # This files contains your custom actions which can be used to run
-# custom Python code by muthu
+# custom Python code by sidarth
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
