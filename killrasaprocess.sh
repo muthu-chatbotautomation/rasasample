@@ -7,4 +7,4 @@ for i in $arr
 do
       kill $i
 done
-sudo chmod ugo+rwx killrasaprocess.sh
+chmod ugo+rwx killrasaprocess.sh
