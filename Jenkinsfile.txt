@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('ShellScript_KillProcess')
+        stage('ShellScript_KillExistingRasaProcess')
             {
             steps
                 {
@@ -15,16 +15,32 @@ pipeline{
                 do
                     kill $i
                 done
-                conda init bash
-                chmod a+rwx models
-                rasa train
-                nohup rasa run --enable-api --cors "*" --debug &
-                nohup rasa run actions --debug &
-
                 '''
                 }
+                
             }
+          stage('Rasa_Train')
+          {
+           steps
+           {
+              sh'''  
+              conda init bash
+              chmod a+rwx models
+              rasa train
+              '''
+          }
+          }
+          stage('Start_RasaCore_RasaAction')
+          {
+          steps
+          {
+               sh''' 
+                nohup rasa run --enable-api --cors "*" --debug &
+                nohup rasa run actions --debug &
+                '''
+          
+          }
+          }
       
-
         }
     }
