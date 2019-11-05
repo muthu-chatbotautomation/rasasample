@@ -7,9 +7,8 @@ pipeline{
           {
           steps
           {                
-                sh 'conda init bash'
-                sh 'BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &'
-                sh 'BUILD_ID=dontKillMe nohup rasa run actions --debug &'          
+                sh 'pwd'
+          
           }
           }   
         }
