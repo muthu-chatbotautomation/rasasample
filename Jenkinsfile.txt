@@ -44,8 +44,6 @@ pipeline{
           steps
           {
                sh''' 
-                #!/bin/bash
-                #this script is to automate kill process
                 nohup rasa run --enable-api --cors "*" --debug &
                 nohup rasa run actions --debug &
                 '''
