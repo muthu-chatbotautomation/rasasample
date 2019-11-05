@@ -12,8 +12,8 @@ pipeline{
                     conda init bash
                     chmod a+rwx models
                     rasa train
-                    nohup rasa run --enable-api --cors "*" --debug &
-                    nohup rasa run actions --debug &
+                    JENKINS_NODE_COOKIE=dontKillMe nohup rasa run --enable-api --cors "*" --debug &
+                    JENKINS_NODE_COOKIE=dontKillMe nohup rasa run actions --debug &
                     '''
                 }
             }   
