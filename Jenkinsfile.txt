@@ -42,13 +42,10 @@ pipeline{
           stage('Start_RasaCore_RasaAction')
           {
           steps
-          {
-               sh'''
-                #!/bin/bash
-                nohup rasa run --enable-api --cors "*" --debug &
-                nohup rasa run actions --debug &
-                '''
-          
+          {                
+                sh 'conda init bash'
+                sh 'nohup rasa run --enable-api --cors "*" --debug &'
+                sh 'nohup rasa run actions --debug &'          
           }
           }
           
