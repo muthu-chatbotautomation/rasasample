@@ -5,9 +5,23 @@ pipeline{
             {
             steps
                 {
-                sh 'ls -l'
+                sh './killrasaprocess.sh'
                 }
             }
+        stage('start_rasacore_rasaaction')
+           {
+           steps
+                {
+                sh '''
+                conda init bash
+                sudo chmod a+rwx models
+                rasa train
+                BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &
+                BUILD_ID=dontKillMe nohup rasa run actions --debug &
+                '''
+                }
+      
+           }
 
         }
     }
