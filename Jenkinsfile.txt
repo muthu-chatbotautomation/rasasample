@@ -6,7 +6,7 @@ pipeline{
             steps
                 {
                 sh '''
-                sudo chmod a+rwx killrasaprocess.sh
+                chmod a+rwx killrasaprocess.sh
                 ./killrasaprocess.sh
                    '''
                 }
