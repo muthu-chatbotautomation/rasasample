@@ -41,6 +41,16 @@ pipeline{
           
           }
           }
+          stage('Unit_Testing')
+          {
+          steps
+          {
+          sh'rasa shell --debug'
+          sh'Hi'
+          sh'im not good'
+          }
+          
+          }
       
         }
     }
