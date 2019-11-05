@@ -5,16 +5,7 @@ pipeline{
             {
             steps
                 {
-                sh '''
-                #!/bin/bash                
-                declare -a arr=$(pgrep rasa)
-                echo "$arr"
-                IFS=$'\n'
-                for i in $arr
-                do
-                    kill $i
-                done
-                '''
+                sh './killrasaprocess.sh'
                 }
             }
 
