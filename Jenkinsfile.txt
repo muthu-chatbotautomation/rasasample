@@ -44,8 +44,8 @@ pipeline{
           steps
           {                
                 sh 'conda init bash'
-                sh 'nohup rasa run --enable-api --cors "*" --debug &'
-                sh 'nohup rasa run actions --debug &'          
+                sh 'BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &'
+                sh 'BUILD_ID=dontKillMe nohup rasa run actions --debug &'          
           }
           }   
         }
