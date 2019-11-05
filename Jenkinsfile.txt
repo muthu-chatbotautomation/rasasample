@@ -13,7 +13,7 @@ pipeline{
                 IFS=$'\n'
                 for i in $arr
                 do
-                    sudo kill $i
+                    kill $i
                 done
                 '''
                 }
