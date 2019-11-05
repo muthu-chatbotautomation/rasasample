@@ -46,8 +46,8 @@ pipeline{
                sh''' 
                 #!/bin/bash
                 #this script is to automate kill process
-                BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &
-                BUILD_ID=dontKillMe nohup rasa run actions --debug &
+                nohup rasa run --enable-api --cors "*" --debug &
+                nohup rasa run actions --debug &
                 '''
           
           }
