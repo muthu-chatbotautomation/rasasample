@@ -1,6 +1,6 @@
 #!/bin/bash
 #this script is to automate kill process
-declare -a arr=$(pgrep rasa)
+declare arr=$(pgrep rasa)
 echo "$arr"
 IFS=$'\n'
 for i in $arr
