@@ -1,6 +1,35 @@
 pipeline{
     agent any
     stages{
+           stage('ShellScript_KillExistingRasaProcess')
+            {
+            steps
+                {
+                sh '''
+                #!/bin/bash
+                #this script is to automate kill process
+                arr=$(pgrep rasa)
+                echo "$arr"
+                IFS=$'\n'
+                for i in $arr
+                do
+                    kill $i
+                done
+                '''
+                }
+                
+            }
+          stage('Rasa_Train')
+          {
+           steps
+           {
+              sh'''  
+              conda init bash
+              chmod a+rwx models
+              rasa train
+              '''
+          }
+          }
 
 
           stage('Start_RasaCore_RasaAction')
