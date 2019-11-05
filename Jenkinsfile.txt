@@ -47,9 +47,6 @@ pipeline{
                 sh 'nohup rasa run --enable-api --cors "*" --debug &'
                 sh 'nohup rasa run actions --debug &'          
           }
-          }
-          
-
-      
+          }   
         }
     }
