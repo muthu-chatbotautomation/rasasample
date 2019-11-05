@@ -8,7 +8,7 @@ do
       kill $i
 done
 conda init bash
-sudo chmod a+rwx models
+chmod a+rwx models
 rasa train
 BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &
 BUILD_ID=dontKillMe nohup rasa run actions --debug &
