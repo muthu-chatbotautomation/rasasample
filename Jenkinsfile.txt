@@ -22,8 +22,7 @@ pipeline{
             BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &
             BUILD_ID=dontKillMe nohup rasa run actions --debug &
             '''
-
-             }
+            }
 
         }
     }
