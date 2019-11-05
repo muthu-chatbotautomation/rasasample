@@ -30,6 +30,13 @@ pipeline{
               '''
           }
           }
+          stage('Unit_Testing')
+          {
+          steps
+          {
+          sh'rasa test'
+          }
+          }
 
 
           stage('Start_RasaCore_RasaAction')
@@ -45,6 +52,7 @@ pipeline{
           
           }
           }
+          
 
       
         }
