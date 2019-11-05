@@ -1,16 +1,16 @@
 pipeline{
     agent any
-    stages{
-
-
+    stages
+        {
           stage('Start_RasaCore_RasaAction')
-          {
-          steps
-          {                
-                sh 'pwd'
-                sh 'ls -l'
-          
-          }
-          }   
+            {
+            steps
+                {                
+                    sh 'pwd'
+                    sh 'ls -l'
+                    sh 'BUILD_ID=dontKillMe nohup rasa run --enable-api --cors "*" --debug &'
+                    sh 'BUILD_ID=dontKillMe nohup rasa run actions --debug &'
+                }
+            }   
         }
     }
