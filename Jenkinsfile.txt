@@ -43,9 +43,10 @@ pipeline{
           {
           steps
           {
-               sh''' 
-                rasa run --enable-api --cors "*" --debug &
-                rasa run actions --debug &
+               sh'''
+                #!/bin/bash
+                nohup rasa run --enable-api --cors "*" --debug &
+                nohup rasa run actions --debug &
                 '''
           
           }
