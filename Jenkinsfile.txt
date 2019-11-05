@@ -35,22 +35,13 @@ pipeline{
           steps
           {
                sh''' 
-                #nohup rasa run --enable-api --cors "*" --debug &
+                nohup rasa run --enable-api --cors "*" --debug &
                 nohup rasa run actions --debug &
                 '''
           
           }
           }
-          stage('Unit_Testing')
-          {
-          steps
-          {
-          sh'rasa shell --debug'
-          sh'Hi'
-          sh'im not good'
-          }
-          
-          }
+
       
         }
     }
