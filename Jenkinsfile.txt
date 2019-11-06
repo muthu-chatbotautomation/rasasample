@@ -56,6 +56,14 @@ pipeline{
                     JENKINS_NODE_COOKIE=dontKillMe nohup rasa run actions --debug &
                     '''
                 }
-            }   
+            }
+          stage('Selenium_Testing')
+            {
+            steps
+                {
+                sh 'cd Selenium_Webdriver/'
+                sh 'python Unit_test.py'
+                }
+            }
         }
     }
