@@ -19,6 +19,6 @@ driver.implicitly_wait(30)
 driver.maximize_window()
 
 # Navigate to the application home page
-driver.get("https://www.google.com/")
+driver.get("https://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html")
 print(driver.current_url)
 
