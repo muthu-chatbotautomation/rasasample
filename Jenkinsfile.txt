@@ -63,9 +63,7 @@ pipeline{
                 {
                 sh '''
                  #!/bin/bash
-                 conda init bash
                  chmod a+rwx Selenium_Webdriver/chromedriver
-                 pip install selenium
                  python Selenium_Webdriver/Unit_test.py
                  '''
                 }
