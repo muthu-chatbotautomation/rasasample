@@ -21,4 +21,4 @@ driver.maximize_window()
 # Navigate to the application home page
 driver.get("https://www.google.com/")
 print(driver.current_url)
-driver.quit()
+
