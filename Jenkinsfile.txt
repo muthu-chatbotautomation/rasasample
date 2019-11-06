@@ -61,7 +61,6 @@ pipeline{
             {
             steps
                 {
-                sh 'sudo pip install selenium'
                 sh 'chmod a+rwx Selenium_Webdriver/'
                 sh 'chmod a+rwx Selenium_Webdriver/chromedriver'
                 sh 'python Selenium_Webdriver/Unit_test.py'
