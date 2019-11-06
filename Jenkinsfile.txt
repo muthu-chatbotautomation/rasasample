@@ -63,7 +63,8 @@ pipeline{
                 {
                 sh '''
                  pip install selenium
-                 chmod a+rwx Selenium_Webdriver/chromedriver                 
+                 chmod a+rwx Selenium_Webdriver/chromedriver
+                 python Selenium_Webdriver/Unit_test.py
                  '''
                 }
             }
