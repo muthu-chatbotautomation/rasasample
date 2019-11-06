@@ -61,9 +61,7 @@ pipeline{
             {
             steps
                 {
-                sh 'chmod a+rwx Selenium_Webdriver/'
-                sh 'chmod a+rwx Selenium_Webdriver/chromedriver'
-                sh 'python Selenium_Webdriver/Unit_test.py'
+                sh 'printenv | sort'
                 }
             }
         }
