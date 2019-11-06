@@ -9,9 +9,9 @@ dir = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver"
 chrome_driver_path = dir + "/chromedriver"
 
 # create a new Chrome session
-options = Options()
-options.add_argument('--headless')
-options.add_argument('--disable-gpu')  # Last I checked this was necessary.
+# options = Options()
+# options.add_argument('--headless')
+# options.add_argument('--disable-gpu')  # Last I checked this was necessary.
 
 driver = webdriver.Chrome(chrome_driver_path)
 # driver = webdriver.Chrome(chrome_driver_path)
