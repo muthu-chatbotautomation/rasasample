@@ -5,8 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 # get the path of ChromeDriverServer
-#dir = "C:\\Users\\Admin\\PycharmProjects\\rasabot1"
-chrome_driver_path = dir + "\\chromedriver.exe"
+dir = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver"
+chrome_driver_path = dir + "/chromedriver.exe"
 
 # create a new Chrome session
 options = Options()
