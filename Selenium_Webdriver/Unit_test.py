@@ -11,14 +11,14 @@ import unittest
 # get the path of ChromeDriverServer
 chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
         # create a new Chrome session
-from pyvirtualdisplay import Display
-display = Display(visible=0, size=(800, 600))
-display.start()
+# from pyvirtualdisplay import Display
+# display = Display(visible=0, size=(800, 600))
+# display.start()
 options1 = Options()
 options1.add_argument('--no-sandbox')
-#         options1.add_argument('--headless')
-#         options1.add_argument("--disable-gpu")        
-#         options1.add_argument("--window-size=238x64")
+options1.add_argument('--headless')
+options1.add_argument("--disable-gpu")        
+options1.add_argument("--window-size=240x65")
          # Last I checked this was necessary.
 
 #         driver = webdriver.Chrome(chrome_driver_path, options=options1)
@@ -37,7 +37,7 @@ Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/inp
 print("Mousepointer value = {0}".format(Mousepointer.tag_name))
 Mousepointer.send_keys("Hi")
 Mousepointer.send_keys(Keys.ENTER)
-display.stop()
+# display.stop()
         
         
         
