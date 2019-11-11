@@ -15,8 +15,8 @@ class Selenium_Test(unittest.TestCase):
         # create a new Chrome session
         options1 = Options()
         options1.add_argument('--no-sandbox')
-        options1.add_argument('--headless')
-        options1.add_argument("--disable-gpu")        
+#         options1.add_argument('--headless')
+#         options1.add_argument("--disable-gpu")        
 #         options1.add_argument("--window-size=1920x1080")
          # Last I checked this was necessary.
 
