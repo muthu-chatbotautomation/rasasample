@@ -35,7 +35,8 @@ class Selenium_Test(unittest.TestCase):
         Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
         Mousepointer.send_keys("Hi")
         time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/button/img').click()
+        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/button/img')
+        Mousepointer.send_keys(u'\ue007')
         time.sleep(3)
         # displaying and validating value
         ExpectedReply = "Hey! How are you Easwar?"
