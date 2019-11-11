@@ -1,5 +1,9 @@
 import os
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.common.by import By
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -29,10 +33,17 @@ class Selenium_Test(unittest.TestCase):
         driver.refresh()
         time.sleep(3)
         driver.find_element_by_xpath('//*[@id="webchat"]/div/button').click()
-        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
+        wait = WebDriverWait(driver, 10)
+        Mousepointer = wait.until(ec.visibility_of_element_located((By.XPATH, '//*[@id="webchat"]/div/div/form/input')))
+
         print("Mousepointer value{0}".format(Mousepointer))
-        Mousepointer.click()
         Mousepointer.send_keys("Hi")
+        time.sleep(2)
+        Mousepointer.send_keys(Keys.ENTER)
+#         Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
+#         print("Mousepointer value{0}".format(Mousepointer))
+#         Mousepointer.click()
+#         Mousepointer.send_keys("Hi")
 #         time.sleep(2)
 #         driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/button/img').click()
 #         time.sleep(5)
