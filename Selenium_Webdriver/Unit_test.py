@@ -16,6 +16,7 @@ class Selenium_Test(unittest.TestCase):
         options1 = Options()
         options1.add_argument('--no-sandbox')
         options1.add_argument("--headless")
+        options1.add_argument('--disable-gpu')
          # Last I checked this was necessary.
 
         driver = webdriver.Chrome(chrome_driver_path, options=options1)
