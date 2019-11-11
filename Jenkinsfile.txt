@@ -54,8 +54,7 @@ pipeline{
                 {
                 sh '''                 
                  chmod a+rwx Selenium_Webdriver/chromedriver
-                 sudo apt-get install xvfb
-                 pip install pyvirtualdisplay
+                 python Selenium_Webdriver/Unit_test.py
                  '''
                 }
             }
