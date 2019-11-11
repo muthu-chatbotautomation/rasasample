@@ -31,7 +31,7 @@ class Selenium_Test(unittest.TestCase):
         time.sleep(3)
         driver.refresh()
         time.sleep(3)
-        driver.find_element_by_xpath('//*[@id="webchat"]/div/button').click()
+        driver.find_element_by_xpath('/html/body/div/div/button').click()
 #         wait = WebDriverWait(driver, 10)
 #         Mousepointer = wait.until(ec.visibility_of_element_located((By.XPATH, '//*[@id="webchat"]/div/div/form/input')))
 
@@ -39,7 +39,7 @@ class Selenium_Test(unittest.TestCase):
 #         Mousepointer.send_keys("Hi")
 #         time.sleep(2)
 #         Mousepointer.send_keys(Keys.ENTER)
-        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input') 
+        Mousepointer = driver.find_element_by_xpath('/html/body/div/div/div/form/input') 
         Mousepointer.click()
         print("Mousepointer value{0}".format(Mousepointer))
         Mousepointer.send_keys("Hi")
