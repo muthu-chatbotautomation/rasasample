@@ -13,13 +13,12 @@ chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdrive
 class Selenium_Test(unittest.TestCase):
     def test_Selenium_Unit_Test(self):
         # create a new Chrome session
-        options = Options()
+        options1 = Options()
         options.add_argument('--no-sandbox')
-        options.add_argument("--window-size=1920,1080");
-        options.add_argument("--start-maximized");
-        options.add_argument("--headless");  # Last I checked this was necessary.
+        options.add_argument("--headless")
+        options.add_argument('--disable-gpu') # Last I checked this was necessary.
 
-        driver = webdriver.Chrome(chrome_driver_path, options=options)
+        driver = webdriver.Chrome(chrome_driver_path, options=options1)
         # driver = webdriver.Chrome(chrome_driver_path)
         driver.implicitly_wait(30)
         driver.maximize_window()
@@ -40,9 +39,9 @@ class Selenium_Test(unittest.TestCase):
 #         Mousepointer.send_keys("Hi")
 #         time.sleep(2)
 #         Mousepointer.send_keys(Keys.ENTER)
-        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
-#         print("Mousepointer value{0}".format(Mousepointer))
+        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input') 
         Mousepointer.click()
+        print("Mousepointer value{0}".format(Mousepointer))
         Mousepointer.send_keys("Hi")
 #         time.sleep(2)
 #         driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/button/img').click()
