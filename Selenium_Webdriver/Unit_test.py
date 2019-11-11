@@ -14,9 +14,9 @@ class Selenium_Test(unittest.TestCase):
     def test_Selenium_Unit_Test(self):
         # create a new Chrome session
         options1 = Options()
-        options.add_argument('--no-sandbox')
-        options.add_argument("--headless")
-        options.add_argument('--disable-gpu') # Last I checked this was necessary.
+        options1.add_argument('--no-sandbox')
+        options1.add_argument("--headless")
+        options1.add_argument('--disable-gpu') # Last I checked this was necessary.
 
         driver = webdriver.Chrome(chrome_driver_path, options=options1)
         # driver = webdriver.Chrome(chrome_driver_path)
