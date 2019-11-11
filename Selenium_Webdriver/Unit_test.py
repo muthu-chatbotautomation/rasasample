@@ -25,14 +25,14 @@ class Selenium_Test(unittest.TestCase):
         driver.refresh()
         time.sleep(3)
         driver.find_element_by_xpath('//*[@id="webchat"]/div/button').click()
-        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
+        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input').click()
         print("Mousepointer value{0}".format(Mousepointer))
-        Mousepointer.click()
+        time.sleep(2)
         Mousepointer.send_keys("Hi")
         time.sleep(2)
         Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/button/img')
         Mousepointer.click()
-        time.sleep(3)
+        time.sleep(5)
          # displaying and validating value
         ExpectedReply = "Hey! How are you Easwar?"
         Reply = driver.find_element_by_xpath('//*[@id="messages"]/div[2]/div/div/div/p/span').text
