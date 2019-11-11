@@ -1,15 +1,11 @@
 import os
 from selenium.webdriver.chrome.options import Options
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import unittest
-
 # get the path of ChromeDriverServer
-
 chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
-
 class Selenium_Test(unittest.TestCase):
     def test_Selenium_Unit_Test(self):
         # create a new Chrome session
@@ -43,7 +39,7 @@ class Selenium_Test(unittest.TestCase):
         print(Reply)
         self.assertEqual(Reply, ExpectedReply)
         print("Success")
-if __name__ == '__main__':
-    unittest.main()
 
+
+if __name__ == '__main__':
 
