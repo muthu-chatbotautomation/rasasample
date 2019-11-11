@@ -16,7 +16,7 @@ class Selenium_Test(unittest.TestCase):
         options1 = Options()
         options1.add_argument('--no-sandbox')
         options1.add_argument("--headless")
-        options1.add_argument('--disable-gpu') # Last I checked this was necessary.
+         # Last I checked this was necessary.
 
         driver = webdriver.Chrome(chrome_driver_path, options=options1)
         # driver = webdriver.Chrome(chrome_driver_path)
@@ -31,8 +31,8 @@ class Selenium_Test(unittest.TestCase):
         time.sleep(3)
         driver.refresh()
         time.sleep(3)
-        driver.find_element_by_xpath('/html/body/div/div/button').click()
-        Mousepointer = driver.find_element_by_xpath('/html/body/div/div/div/form/input').click()         
+        driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
+        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input').click()         
         print("Mousepointer value{0}".format(Mousepointer))
 #         Mousepointer.send_keys("Hi")
 
