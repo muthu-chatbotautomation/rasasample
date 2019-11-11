@@ -16,26 +16,25 @@ class Selenium_Test(unittest.TestCase):
         options1 = Options()
         options1.add_argument('--no-sandbox')
         options1.add_argument('--headless')
-        options1.add_argument('--disable-gpu')
          # Last I checked this was necessary.
 
         driver = webdriver.Chrome(chrome_driver_path, options=options1)
         # driver = webdriver.Chrome(chrome_driver_path)
         driver.implicitly_wait(30)
-        driver.maximize_window()
+        
         
 
         # chatbot testing simulation
         time.sleep(12)
         driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
         print(driver.current_url)
-        time.sleep(12)
+        time.sleep(5)
         driver.refresh()
-        time.sleep(12)
+        time.sleep(5)
         driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
-        time.sleep(12)
+        time.sleep(5)
         Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
-        print("Mousepointer value{0}".format(Mousepointer))
+        print("Mousepointer value = {0}".format(Mousepointer.tag_name))
         Mousepointer.send_keys("Hi")
         Mousepointer.send_keys(Keys.ENTER)
 
