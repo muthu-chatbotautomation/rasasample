@@ -9,31 +9,45 @@ from selenium.webdriver.common.keys import Keys
 import time
 import unittest
 # get the path of ChromeDriverServer
-chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
-        # create a new Chrome session
-# from pyvirtualdisplay import Display
-# display = Display(visible=0, size=(800, 600))
-# display.start()
-options = webdriver.FirefoxOptions()
-options.add_argument('-headless')
-         # Last I checked this was necessary.
 
-#         driver = webdriver.Chrome(chrome_driver_path, options=options1)
-driver = webdriver.Firefox(firefox_options=options)
-driver.implicitly_wait(30)
-time.sleep(12)   
-driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
-print(driver.current_url)        
-time.sleep(5)
-driver.refresh()   
-time.sleep(5)
-# chatbot testing simulation
-driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
-time.sleep(5)
-Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
-Mousepointer.send_keys("Hi")
-Mousepointer.send_keys(Keys.ENTER)
-driver.quit()
+class Selenium_Test(unittest.TestCase):
+    def test_Selenium_Unit_Test(self):
+        chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
+        # create a new Chrome session
+        # from pyvirtualdisplay import Display
+        # display = Display(visible=0, size=(800, 600))
+        # display.start()
+        options = webdriver.FirefoxOptions()
+        options.add_argument('-headless')
+                 # Last I checked this was necessary.
+
+        #         driver = webdriver.Chrome(chrome_driver_path, options=options1)
+        driver = webdriver.Firefox(firefox_options=options)
+        driver.implicitly_wait(30)
+        time.sleep(12)   
+        driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
+        print(driver.current_url)        
+        time.sleep(5)
+        driver.refresh()   
+        time.sleep(5)
+        # chatbot testing simulation
+        driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
+        time.sleep(5)
+        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
+        Mousepointer.send_keys("Hi")
+        Mousepointer.send_keys(Keys.ENTER)
+        ExpectedReply = "Hey! How are you Easwar?"
+        Reply = driver.find_element_by_xpath('//*[@id="messages"]/div[2]/div/div/div/p/span').text
+        print(Reply)
+        self.assertEqual(Reply, ExpectedReply)
+        print("Success")
+        driver.quit()
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+
         
         
         
