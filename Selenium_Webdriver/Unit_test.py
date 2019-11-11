@@ -15,7 +15,7 @@ class Selenium_Test(unittest.TestCase):
         # create a new Chrome session
         options1 = Options()
         options1.add_argument('--no-sandbox')
-        options1.add_argument("--headless")
+        options1.add_argument('--headless')
         options1.add_argument('--disable-gpu')
          # Last I checked this was necessary.
 
@@ -35,7 +35,6 @@ class Selenium_Test(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
         time.sleep(12)
         Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
-        driver.execute_script("arguments[0].click();",Mousepointer)
         print("Mousepointer value{0}".format(Mousepointer))
         Mousepointer.send_keys("Hi")
         Mousepointer.send_keys(Keys.ENTER)
