@@ -37,7 +37,7 @@ pipeline{
                 {
                 sh '''                 
                  chmod a+rwx Selenium_Webdriver/chromedriver
-                 sudo apt install firefox
+                 python Selenium_Webdriver/Unit_test.py
                  '''
                 }
             }
