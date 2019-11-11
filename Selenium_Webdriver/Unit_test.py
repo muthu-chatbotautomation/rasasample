@@ -7,8 +7,8 @@ import time
 import unittest
 
 # get the path of ChromeDriverServer
-dir = "C:\\Users\\Admin\\PycharmProjects\\rasabot1"
-chrome_driver_path = dir + "\\chromedriver.exe"
+
+chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
 
 
 class Selenium_Test(unittest.TestCase):
