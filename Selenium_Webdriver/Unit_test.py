@@ -13,19 +13,19 @@ chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdrive
 class Selenium_Test(unittest.TestCase):
     def test_Selenium_Unit_Test(self):
         # create a new Chrome session
-#         from pyvirtualdisplay import Display
+        from pyvirtualdisplay import Display
 
-#         display = Display(visible=0, size=(800, 600))
-#         display.start()
+        display = Display(visible=0, size=(800, 600))
+        display.start()
         options1 = Options()
-        options1.add_argument('--no-sandbox')
-        options1.add_argument('--headless')
-        options1.add_argument("--disable-gpu")        
-        options1.add_argument("--window-size=238x64")
+#         options1.add_argument('--no-sandbox')
+#         options1.add_argument('--headless')
+#         options1.add_argument("--disable-gpu")        
+#         options1.add_argument("--window-size=238x64")
          # Last I checked this was necessary.
 
-        driver = webdriver.Chrome(chrome_driver_path, options=options1)
-        # driver = webdriver.Chrome(chrome_driver_path)
+#         driver = webdriver.Chrome(chrome_driver_path, options=options1)
+        driver = webdriver.Chrome(chrome_driver_path)
         driver.implicitly_wait(30)
         
         
@@ -43,7 +43,7 @@ class Selenium_Test(unittest.TestCase):
         print("Mousepointer value = {0}".format(Mousepointer.tag_name))
         Mousepointer.send_keys("Hi")
         Mousepointer.send_keys(Keys.ENTER)
-#         display.stop()
+        display.stop()
 
 
 if __name__ == '__main__':
