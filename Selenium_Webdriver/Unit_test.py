@@ -33,7 +33,7 @@ class Selenium_Test(unittest.TestCase):
         driver.refresh()
         time.sleep(3)
         driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
-        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input').click()         
+        Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')         
         print("Mousepointer value{0}".format(Mousepointer))
 #         Mousepointer.send_keys("Hi")
 
