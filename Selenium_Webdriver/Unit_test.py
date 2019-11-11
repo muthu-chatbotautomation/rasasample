@@ -15,9 +15,9 @@ class Selenium_Test(unittest.TestCase):
         # create a new Chrome session
         options = Options()
         options.add_argument('--no-sandbox')
-        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--start-maximized");
-        options.addArguments("--headless");  # Last I checked this was necessary.
+        options.add_argument("--window-size=1920,1080");
+        options.add_argument("--start-maximized");
+        options.add_argument("--headless");  # Last I checked this was necessary.
 
         driver = webdriver.Chrome(chrome_driver_path, options=options)
         # driver = webdriver.Chrome(chrome_driver_path)
