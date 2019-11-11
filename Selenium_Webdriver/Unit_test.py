@@ -15,14 +15,14 @@ from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800, 600))
 display.start()
 options1 = Options()
-#         options1.add_argument('--no-sandbox')
+options1.add_argument('--no-sandbox')
 #         options1.add_argument('--headless')
 #         options1.add_argument("--disable-gpu")        
 #         options1.add_argument("--window-size=238x64")
          # Last I checked this was necessary.
 
 #         driver = webdriver.Chrome(chrome_driver_path, options=options1)
-driver = webdriver.Chrome(chrome_driver_path)
+driver = webdriver.Chrome(chrome_driver_path,options=options1)
 driver.implicitly_wait(30)
 time.sleep(12)   
 driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
