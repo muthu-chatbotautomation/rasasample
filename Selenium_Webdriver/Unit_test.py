@@ -32,25 +32,9 @@ class Selenium_Test(unittest.TestCase):
         driver.refresh()
         time.sleep(3)
         driver.find_element_by_xpath('/html/body/div/div/button').click()
-#         wait = WebDriverWait(driver, 10)
-#         Mousepointer = wait.until(ec.visibility_of_element_located((By.XPATH, '//*[@id="webchat"]/div/div/form/input')))
-
-#         print("Mousepointer value{0}".format(Mousepointer))
-#         Mousepointer.send_keys("Hi")
-#         time.sleep(2)
-#         Mousepointer.send_keys(Keys.ENTER)
         Mousepointer = driver.find_element_by_xpath('/html/body/div/div/div/form/input').click()         
         print("Mousepointer value{0}".format(Mousepointer))
-        Mousepointer.send_keys("Hi")
-#         time.sleep(2)
-#         driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/button/img').click()
-#         time.sleep(5)
-#         # displaying and validating value
-#         ExpectedReply = "Hey! How are you Easwar?"
-#         Reply = driver.find_element_by_xpath('//*[@id="messages"]/div[2]/div/div/div/p/span').text
-#         print(Reply)
-#         self.assertEqual(Reply, ExpectedReply)
-#         print("Success")
+#         Mousepointer.send_keys("Hi")
 
 
 if __name__ == '__main__':
