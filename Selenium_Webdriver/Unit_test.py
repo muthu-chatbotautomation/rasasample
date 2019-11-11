@@ -33,7 +33,7 @@ time.sleep(5)
 # chatbot testing simulation
 driver.find_element_by_xpath('//*[@id="webchat"]/div/button ').click()
 time.sleep(5)
-Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
+Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input').click()
 print("Mousepointer value = {0}".format(Mousepointer.tag_name))
 Mousepointer.send_keys("Hi")
 Mousepointer.send_keys(Keys.ENTER)
