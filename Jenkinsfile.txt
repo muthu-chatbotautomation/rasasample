@@ -68,7 +68,7 @@ pipeline{
                 {
                 sh '''
                  sudo pip install html-testRunner
-                 python Selenium_Webdriver/Test_Report.py
+                 sudo python Selenium_Webdriver/Test_Report.py
                  '''
                 }
             }
