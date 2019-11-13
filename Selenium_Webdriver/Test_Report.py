@@ -1,5 +1,5 @@
 import unittest
-import HtmlTestRunner
+
 import os
 
 from HtmlTestRunner import HTMLTestRunner
