@@ -67,8 +67,8 @@ pipeline{
             steps
                 {
                 sh '''
-                 sudo pip install html-testRunner
-                 sudo python Selenium_Webdriver/Test_Report.py
+                 pip uninstall html-testRunner
+                 python Selenium_Webdriver/Test_Report.py
                  '''
                 }
             }
