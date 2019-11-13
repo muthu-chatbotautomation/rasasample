@@ -10,6 +10,7 @@ import time
 import unittest
 # get the path of ChromeDriverServer
 
+__author__ = 'Hanon'
 class Selenium_Test(unittest.TestCase):
     def test_Selenium_Unit_Test(self):
         chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
