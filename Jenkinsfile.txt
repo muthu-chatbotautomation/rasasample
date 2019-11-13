@@ -67,7 +67,7 @@ pipeline{
             steps
                 {
                 sh '''
-                 pip install html-testRunner
+                 sudo pip install html-testRunner
                  python Selenium_Webdriver/Test_Report.py
                  '''
                 }
