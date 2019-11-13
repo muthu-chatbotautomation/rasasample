@@ -67,7 +67,6 @@ pipeline{
             steps
                 {
                 sh '''
-                 sudo pip uninstall html-testRunner
                  python Selenium_Webdriver/Test_Report.py
                  '''
                 }
