@@ -26,5 +26,5 @@ class Selenium_Test_Report(unittest.TestCase):
         runner1.run(smoke_test)
 
 
-obj = Selenium_Test_Report()
-obj.test_report_generation()
+if __name__ == "__main__":
+    unittest.main()
