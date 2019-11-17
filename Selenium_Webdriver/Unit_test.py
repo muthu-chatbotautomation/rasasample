@@ -37,7 +37,7 @@ class Selenium_Test(unittest.TestCase):
         Mousepointer = driver.find_element_by_xpath('//*[@id="webchat"]/div/div/form/input')
         Mousepointer.send_keys("Hi")
         Mousepointer.send_keys(Keys.ENTER)
-        ExpectedReply = "Hey! How are you Easwar?"
+        ExpectedReply = "Hey! How are you Muthu?"
         Reply = driver.find_element_by_xpath('//*[@id="messages"]/div[2]/div/div/div/p/span').text
         print(Reply)
         self.assertEqual(Reply, ExpectedReply)
