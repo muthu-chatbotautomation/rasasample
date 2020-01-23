@@ -28,7 +28,7 @@ class Selenium_Test(unittest.TestCase):
 
         opts = Options()
         opts.add_argument("--headless")
-        driver = webdriver.Firefox(executable_path=r'/geckodriver.exe',options=opts)
+        driver = webdriver.Firefox(executable_path=r'/geckodriver.exe',firefox_options=opts)
         driver.implicitly_wait(30)
         time.sleep(12)   
         driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
