@@ -1,19 +1,19 @@
 import os
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.common.by import By
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as ec
+# from selenium.webdriver.common.by import By
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.keys import Keys
 import time
-import unittest
+# import unittest
 # get the path of ChromeDriverServer
 
 __author__ = 'Hanon'
 class Selenium_Test(unittest.TestCase):
     def test_Selenium_Unit_Test(self):
-        chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
+#         chrome_driver_path = "/var/lib/jenkins/workspace/rasa pipeline/Selenium_Webdriver/chromedriver"
         # create a new Chrome session
         # from pyvirtualdisplay import Display
         # display = Display(visible=0, size=(800, 600))
