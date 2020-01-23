@@ -27,6 +27,7 @@ pipeline{
                         sh '''
                         #!/bin/bash
                         #this script is to automate kill process
+                         . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
                         rasa test
                         '''
                     }
@@ -41,6 +42,7 @@ pipeline{
                     sh '''
                     #!/bin/bash
                     #this script is to automate kill process
+                     . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
                     JENKINS_NODE_COOKIE=dontKillMe nohup rasa run --enable-api --cors "*" --debug &
                     JENKINS_NODE_COOKIE=dontKillMe nohup rasa run actions --debug &
                     '''
@@ -51,6 +53,7 @@ pipeline{
             steps
                 {
                 sh '''
+                 . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
                  python Selenium_Webdriver/Unit_test.py
                  '''
                 }
