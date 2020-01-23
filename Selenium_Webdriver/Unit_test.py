@@ -23,7 +23,12 @@ class Selenium_Test(unittest.TestCase):
                  # Last I checked this was necessary.
 
         #         driver = webdriver.Chrome(chrome_driver_path, options=options1)
-        driver = webdriver.Firefox(executable_path=r'/geckodriver.exe')
+        from selenium.webdriver.firefox.options import Options
+        from selenium.webdriver.common.keys import Keys
+
+        opts = Options()
+        opts.set_headless()
+        driver = webdriver.Firefox(executable_path=r'/geckodriver.exe',options=opts)
         driver.implicitly_wait(30)
         time.sleep(12)   
         driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
