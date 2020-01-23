@@ -27,7 +27,7 @@ class Selenium_Test(unittest.TestCase):
         from selenium.webdriver.common.keys import Keys
 
         options1 = Options()
-        options1.add_argument('-headless')
+         options.headless = True
         driver = webdriver.Firefox(executable_path=r'/geckodriver.exe',options=options1)
         driver.implicitly_wait(30)
         time.sleep(12)   
