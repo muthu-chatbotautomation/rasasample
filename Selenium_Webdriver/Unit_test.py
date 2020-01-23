@@ -19,7 +19,7 @@ class Selenium_Test(unittest.TestCase):
         # display = Display(visible=0, size=(800, 600))
         # display.start()
 #         options = webdriver.FirefoxOptions()
-        options.add_argument('-headless')
+#         options.add_argument('-headless')
                  # Last I checked this was necessary.
 
         #         driver = webdriver.Chrome(chrome_driver_path, options=options1)
