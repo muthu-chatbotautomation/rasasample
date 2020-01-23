@@ -2,23 +2,6 @@ pipeline{
     agent any
     stages
         {      
-           stage('ShellScript_KillExistingProcess')
-           {
-                steps
-                    {
-                        sh '''
-                        #!/bin/bash
-                        #this script is to automate kill process
-                        arr=$(pgrep rasa)
-                        echo "$arr"
-                        IFS=$'\n'
-                        for i in $arr
-                        do
-                            kill -9 $i
-                        done
-                        '''
-                    }
-             }
 
 
            stage('Rasa_Train')
