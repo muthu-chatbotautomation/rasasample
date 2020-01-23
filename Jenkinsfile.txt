@@ -11,8 +11,7 @@ pipeline{
                     {
                         sh '''
                         #!/bin/bash
-                        #this script is to automate kill process
-                        conda init bash
+                        #this script is to automate kill process                        
                         chmod a+rwx models
                         rasa train
                         '''
