@@ -70,7 +70,7 @@ pipeline{
                 {
                 sh '''
                  . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
-                 pip install selenium
+                 sudo pip install selenium
                  python Selenium_Webdriver/Unit_test.py
                  '''
                 }
