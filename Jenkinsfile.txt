@@ -14,7 +14,7 @@ pipeline{
                         #this script is to automate kill process 
                         echo "$USER"
                         . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
-                        chmod a+rwx models
+                        sudo chmod a+rwx models
                         rasa train                      
                         '''
                     }
