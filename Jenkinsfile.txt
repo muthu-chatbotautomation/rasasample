@@ -15,7 +15,7 @@ pipeline{
                         IFS=$'\n'
                         for i in $arr
                         do
-                            kill $i
+                            kill -9 $i
                         done
                         '''
                     }
