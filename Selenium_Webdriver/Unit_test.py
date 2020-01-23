@@ -18,12 +18,12 @@ class Selenium_Test(unittest.TestCase):
         # from pyvirtualdisplay import Display
         # display = Display(visible=0, size=(800, 600))
         # display.start()
-        options = webdriver.FirefoxOptions()
+#         options = webdriver.FirefoxOptions()
         options.add_argument('-headless')
                  # Last I checked this was necessary.
 
         #         driver = webdriver.Chrome(chrome_driver_path, options=options1)
-        driver = webdriver.Firefox(executable_path=r'/geckodriver.exe',firefox_options=options)
+        driver = webdriver.Firefox(executable_path=r'/geckodriver.exe')
         driver.implicitly_wait(30)
         time.sleep(12)   
         driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
