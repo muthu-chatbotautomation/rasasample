@@ -69,11 +69,8 @@ pipeline{
             steps
                 {
                 sh '''
-                echo "$PATH"
                  #!/bin/bash
-                 . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
-                 
-                 python Selenium_Webdriver/Unit_test.py
+                echo "$PATH"
                  '''
                 }
             }
