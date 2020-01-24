@@ -1,8 +1,8 @@
 import os
 # from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as ec
-# from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.common.by import By
 
 from selenium.webdriver.common.keys import Keys
 import time
@@ -44,7 +44,7 @@ class Selenium_Test(unittest.TestCase):
         Mousepointer.send_keys("Hi")
         Mousepointer.send_keys(Keys.ENTER)
         ExpectedReply = "Hey! How are you Muthu?"
-        Reply = driver.find_element_by_xpath('//*[@id="messages"]/div[2]/div/div/div/p/span').text
+        Reply = driver.find_element_by_xpath('//*[@id="messages"]/div/following::span').text
         print(Reply)
         self.assertEqual(Reply, ExpectedReply)
         print("Success")
