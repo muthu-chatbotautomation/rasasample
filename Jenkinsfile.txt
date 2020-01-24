@@ -51,9 +51,7 @@ pipeline{
             steps
                 {
                 sh '''
-                 #!/bin/bash
-                 whoami
-                 sudo whoami
+                 #!/bin/bash                 
                  . /var/lib/jenkins/anaconda3/bin/activate base
                  python Selenium_Webdriver/Unit_test.py
 
