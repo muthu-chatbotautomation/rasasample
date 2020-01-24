@@ -73,8 +73,6 @@ pipeline{
                  #!/bin/bash
                 echo "$PATH"
                 . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
-                sudo pip uninstall -y selenium
-                sudo pip install selenium
                 python Selenium_Webdriver/Unit_test.py
                  '''
                 }
