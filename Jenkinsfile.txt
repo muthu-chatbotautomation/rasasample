@@ -53,6 +53,7 @@ pipeline{
                 sh '''
                  #!/bin/bash                 
                  . /var/lib/jenkins/anaconda3/bin/activate base
+                 export PATH=$PATH:/usr/bin/geckodriver:/usr/bin/
                  echo "$PATH"
                  python Selenium_Webdriver/Unit_test.py
 
