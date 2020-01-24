@@ -32,7 +32,7 @@ class Selenium_Test(unittest.TestCase):
         driver = WebDriver(options=options1)
         driver.implicitly_wait(30)
         time.sleep(12)   
-        driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
+        driver.get('https://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
         print(driver.current_url)        
         time.sleep(5)
         driver.refresh()   
