@@ -3,10 +3,11 @@ import os
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as ec
 # from selenium.webdriver.common.by import By
-from selenium import webdriver
+
 # from selenium.webdriver.common.keys import Keys
 import time
 import unittest
+from selenium import webdriver
 
 # get the path of ChromeDriverServer
 
@@ -28,7 +29,7 @@ class Selenium_Test(unittest.TestCase):
 
         options1 = FirefoxOptions()
         options1.add_argument("-headless")
-        driver = WebDriver(executable_path=r'/geckodriver.exe',options=options1)
+        driver = WebDriver(executable_path=r'/usr/bin/geckodriver.exe,options=options1)
         driver.implicitly_wait(30)
         time.sleep(12)   
         driver.get('http://sidwebpage.s3.us-east-2.amazonaws.com/website/index.html')
