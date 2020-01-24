@@ -30,6 +30,7 @@ pipeline{
                         #this script is to automate kill process 
                         echo "$USER"
                         . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
+                    
                         sudo chmod a+rwx models
                         rasa train                      
                         '''
@@ -72,6 +73,7 @@ pipeline{
                  #!/bin/bash
                 echo "$PATH"
                 . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
+                sudo pip install selenium
                 python Selenium_Webdriver/Unit_test.py
                  '''
                 }
