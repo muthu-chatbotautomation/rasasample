@@ -3,11 +3,15 @@ import os
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as ec
 # from selenium.webdriver.common.by import By
+import sys
+sys.path.append('usr/local/lib/python2.7/dist-packages/selenium/')
 
+sys.path.append('usr/local/lib/python2.7/dist-packages/selenium-3.141.0.dist-info/')
 from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 import time
 import unittest
+
 # get the path of ChromeDriverServer
 
 __author__ = 'Hanon'
