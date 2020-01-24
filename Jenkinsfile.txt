@@ -69,6 +69,7 @@ pipeline{
             steps
                 {
                 sh '''
+                 #!/bin/bash
                  . /home/deepthi_chatbotautomation_gmail_/anaconda3/bin/activate rasachat
                  
                  sudo python Selenium_Webdriver/Unit_test.py
