@@ -27,6 +27,7 @@ pipeline{
                         sh '''
                         #!/bin/bash
                         #this script is to automate kill process
+                        export PATH=$PATH:/var/lib/jenkins/anaconda3/envs/rasa/bin/:/var/lib/jenkins/anaconda3/envs/:/var/lib/jenkins/anaconda3/envs/rasa/bin/rasa
                         . /var/lib/jenkins/anaconda3/bin/activate rasa
                         rasa test
                         '''
@@ -42,6 +43,7 @@ pipeline{
                     sh '''
                     #!/bin/bash
                     #this script is to automate kill process
+                    export PATH=$PATH:/var/lib/jenkins/anaconda3/envs/rasa/bin/:/var/lib/jenkins/anaconda3/envs/:/var/lib/jenkins/anaconda3/envs/rasa/bin/rasa
                      . /var/lib/jenkins/anaconda3/bin/activate rasa
                     JENKINS_NODE_COOKIE=dontKillMe nohup rasa run --enable-api --cors "*" --port 5001 --debug &
                     JENKINS_NODE_COOKIE=dontKillMe nohup rasa run actions --debug &
@@ -53,7 +55,8 @@ pipeline{
             steps
                 {
                 sh '''
-                 #!/bin/bash                 
+                 #!/bin/bash
+                 export PATH=$PATH:/var/lib/jenkins/anaconda3/envs/rasa/bin/:/var/lib/jenkins/anaconda3/envs/:/var/lib/jenkins/anaconda3/envs/rasa/bin/rasa
                  . /var/lib/jenkins/anaconda3/bin/activate rasa
                  
                  echo "$PATH"
