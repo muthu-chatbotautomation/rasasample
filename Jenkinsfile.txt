@@ -56,7 +56,7 @@ pipeline{
                 {
                 sh '''
                  #!/bin/bash
-                 export PATH=$PATH:/var/lib/jenkins/anaconda3/envs/rasa/bin/:/var/lib/jenkins/anaconda3/envs/:/var/lib/jenkins/anaconda3/envs/rasa/bin/rasa
+                 export PATH=$PATH:/var/lib/jenkins/anaconda3/envs/rasa/bin/:/var/lib/jenkins/anaconda3/envs/:/var/lib/jenkins/anaconda3/envs/rasa/bin/rasa:/var/lib/jenkins/anaconda3/lib/python3.6/site-packages/selenium
                  . /var/lib/jenkins/anaconda3/bin/activate rasa
                  
                  echo "$PATH"
